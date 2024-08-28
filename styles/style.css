@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+  --color-background: #f3f5fc;
+  --color-background-header: #0a3871;
+  --color-primary: #0a3871;
+  --color-primary-hover: #1056aa;
+  --color-secondary: #d9dfe8;
+  --color-text: #343a40;
+  --color-text-muted: #495057;
+  --color-border: #0a3871;
+  --color-placeholder: #0a3871;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-background);
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 32px;
+}
+
+main {
+  display: flex;
+  margin-bottom: 10px;
+  margin-left: 180px;
+  margin-bottom: 0; /* Asegura que el main no tenga margen inferior */
+}
+
+header {
+  background-color: var(--color-background-header);
+}
+
+.header_img_logo,
+.header,
+.header_logo,
+.header_titulo,
+.footer,
+.footer_texto,
+.footer-enlace {
+  background-color: var(--color-background-header);
+}
+
+.header_img_logo {
+  color: white;
+  padding-top: 10px;
+  margin-left: 10px;
+  width: 25%;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.header_titulo {
+  color: #d9dfe8;
+}
+
+/* Input */
+
+.input_text {
+  margin-block: 2em;
+  background-color: white;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* Espacio entre los elementos en la columna */
+  padding: 10px;
+}
+
+/* TextArea */
+.text-area-input {
+  border-radius: 24px;
+  min-height: 200px; /* Permite que crezca si es necesario */
+  border: none;
+  color: var(--color-primary);
+  margin-top: 0px;
+  padding: 2px;
+  text-transform: lowercase;
+}
+
+::placeholder {
+  color: var(--color-placeholder);
+}
+
+.text-area-input:focus {
+  outline: none;
+}
+
+/* input_info */
+.input_info {
+  display: flex;
+  align-items: center;
+  color: var(--color-text-muted);
+  margin-bottom: 16px;
+}
+
+.input_info img {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+}
+
+.input_info h6 {
+  font-size: 0.4rem;
+}
+
+/* Botones */
+
+.input_btn {
+  display: flex;
+  margin-top: 18px;
+}
+
+button {
+  font-family: 'Inter', sans-serif;
+  border: 1px solid var(--color-border);
+  border-radius: 24px;
+  width: 100%;
+  height: 1.8rem;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 1s;
+}
+
+button:hover {
+  transition: all 0.3s ease-in-out;
+  scale: 0.85;
+}
+
+.btn-encriptar {
+  background-color: var(--color-primary);
+  color: white;
+}
+.btn-encriptar:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.btn-desencriptar {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  margin-left: 30px;
+}
+
+/* Output */
+
+.output_text {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto; /* Centra el contenedor en su espacio disponible */
+  padding: 20px; /* Espacio interno */
+  background-color: white;
+  border-radius: 24px;
+  text-align: center; /* Centra todo el contenido interno */
+  margin-bottom: 0 !important; /* Asegura que el contenedor anterior no tenga margen inferior */
+}
+
+/* TextArea */
+
+.text-area-mensaje {
+  background-image: url('../assets/Muneco.png');
+  background-repeat: no-repeat;
+  background-position: center top; /* Centra la imagen de fondo */
+  border: none;
+  border-radius: 24px;
+  color: var(--color-primary);
+  margin: 0 auto; /* Centra el textarea dentro de su contenedor */
+  padding: 20px;
+  width: 100%; /* Ajusta para que ocupe todo el ancho del contenedor */
+  height: 9.5rem; /* Ajusta la altura según sea necesario */
+  box-sizing: border-box; /* Asegura que padding y width se comporten correctamente */
+}
+.text-area-mensaje:focus {
+  outline: none;
+}
+
+/* Mensajes */
+
+.output-mensaje h4 {
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--color-text);
+}
+
+.output-mensaje h5 {
+  font-size: 16px;
+  color: var(--color-text-muted);
+}
+
+/* boton */
+
+.output_btn {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-copiar {
+  border: 1px solid var(--color-border);
+  border-radius: 24px;
+  color: var(--color-primary);
+  cursor: pointer;
+  width: 100%;
+  margin-top: 60px;
+  display: none;
+}
+
+.btn-copiar:hover {
+  background-color: var(--color-primary-hover);
+  color: white;
+}
+
+/* footer */
+
+.footer {
+  background-color: var(--color-background-header);
+  padding: 6px 6px;
+}
+
+.site-footer {
+  width: 100%;
+  background-color: var(--color-background);
+  color: var(--color-secondary);
+  text-align: center;
+  font-size: 18px !important; /* forzar el tamaño del texto */
+  border-top: 1px solid var(--color-border);
+  margin-top: 1.5rem;
+}
+
+.site-footer p {
+  margin: 0;
+  font-size: 18px !important; /* Asegura que el tamaño del texto en el párrafo sea pequeño */
+}
+
+/* LinkeIn link*/
+
+.footer-enlace {
+  font-size: 18px; /* Controla el tamaño del texto */
+  color: var(--color-secondary); /* Cambia el color si lo deseas */
+  text-decoration: none; /* Elimina subrayado si no lo quieres */
+  font-weight: bold; /* Añade peso al texto si lo deseas */
+}
+
+.footer-enlace:hover {
+  text-decoration: underline; /* Añade subrayado al pasar el ratón si lo deseas */
+  color: var(--color-secondary); /* Cambia el color al pasar el ratón */
+}
+
+/* Ancho de la pantalla es de 1100px o menos.Este tamaño para dispositivos como Tabletas grandes */
+@media (max-width: 1100px) {
+  /* Ajustes generales */
+  body {
+    padding: 10px;
+  }
+
+  main {
+    margin-left: 0;
+    padding: 0 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Ajustes para las secciones de entrada y salida */
+  .input_text,
+  .output_text {
+    max-width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+  }
+
+  /* Ajuste del tamaño del textarea de entrada */
+  .text-area-input {
+    min-height: 300px;
+    padding: 10px;
+  }
+
+  /* Ajuste del tamaño del textarea de salida */
+  .text-area-mensaje {
+    height: 200px;
+    padding: 10px;
+  }
+
+  /* Botones alineados horizontalmente en tabletas */
+  .input_btn {
+    flex-direction: row; /* Asegura que los botones estén alineados en fila */
+    gap: 10px; /* Espacio entre los botones */
+    justify-content: center; /* Centra los botones en su contenedor */
+  }
+
+  .btn-encriptar,
+  .btn-desencriptar {
+    margin: 0;
+    width: 40%; /* Asegura que los botones ocupen un espacio adecuado en fila */
+  }
+
+  /* Ajuste del botón copiar */
+  .output_btn .btn-copiar {
+    margin-top: 20px;
+    width: 70%;
+  }
+}
+
+/*  Ajustes al footer Tablet*/
+.site-footer {
+  font-size: 7px; /* Tamaño de texto ligeramente menor */
+}
+
+/* Ancho de la pantalla es de 400px o menos. Este tamaño para dispositivos móviles. */
+@media (max-width: 400px) {
+  /* Ajustes generales */
+  body {
+    padding: 10px;
+  }
+
+  main {
+    margin-left: 0;
+    padding: 0 10px; /* Ajusta el padding para evitar que el contenido toque los bordes */
+    flex-direction: column; /* Asegura que todo se apile verticalmente */
+    align-items: center;
+  }
+
+  /* Ajustes para las secciones de entrada y salida */
+  .input_text,
+  .output_text {
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 15px;
+  }
+
+  /* Ajuste del tamaño del textarea de entrada */
+  .text-area-input {
+    min-height: 250px; /* Ajusta la altura para pantallas pequeñas */
+    padding: 10px;
+  }
+
+  /* Ajuste del tamaño del textarea de salida */
+  .text-area-mensaje {
+    height: 150px; /* Ajusta la altura para pantallas pequeñas */
+    padding: 10px;
+  }
+
+  /* Botones apilados verticalmente en móviles */
+  .input_btn {
+    flex-direction: column; /* Asegura que los botones se apilen verticalmente */
+    gap: 10px; /* Espacio entre los botones */
+    width: 100%; /* Asegura que ocupen todo el ancho disponible */
+  }
+
+  .btn-encriptar,
+  .btn-desencriptar {
+    margin: 0; /* Elimina márgenes laterales */
+    width: 100%; /* Asegura que los botones ocupen todo el ancho disponible */
+  }
+
+  /* Ajuste del botón copiar */
+  .output_btn .btn-copiar {
+    margin-top: 20px;
+    width: 100%;
+  }
+}
+
+/*  Ajustes al footer Movil */
+.site-footer {
+  font-size: 6px; /* Tamaño de texto aún más pequeño */
+}
